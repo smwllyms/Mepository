@@ -37,7 +37,7 @@
     box-sizing: border-box;
 }
 #header-nav li:hover {
-    background-color: #f4f4f4;
+    background-color: #e7e7e7;
 }
 
 #header-search input {
@@ -75,5 +75,5 @@
     box-sizing: border-box;
 }
 #header-settings li:hover {
-    background-color: #f4f4f4;
+    background-color: #e7e7e7;
 }

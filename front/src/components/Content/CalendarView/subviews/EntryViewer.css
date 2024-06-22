@@ -1,0 +1,29 @@
+.entry-viewer {
+    width: 100%;
+    background-color: #eee;
+
+    padding: 12px;
+    box-sizing: border-box;
+}
+.entry-viewer .entry {
+    padding: 4px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+
+    border-bottom: 2px solid #ddd;
+}
+.entry-viewer .entry:last-child { 
+    border: none; 
+}
+
+.entry-viewer .entry span {
+    font-style: italic;
+    padding-right: 10px;
+    color: #777;
+    font-weight: bold;
+    white-space: wrap;
+}
+
+.entry-viewer .entry p {
+    overflow-wrap: anywhere;
+} 

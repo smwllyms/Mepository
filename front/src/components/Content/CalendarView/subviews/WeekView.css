@@ -1,0 +1,47 @@
+#weekView .week {
+    display: flex;
+    height: 100px;
+}
+
+#weekView .week .weekDay {
+
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 100%;
+
+    border: 2px solid #ddd;
+    border-right: none;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    cursor:pointer;
+}
+#weekView .week .weekDay:last-child {
+    border-right: 2px solid #ddd;
+}
+
+#weekView .week .weekDay.valid-day {
+    opacity: 0.5;
+    background-color: #ccc;
+    border: 2px solid #aaa;
+    border-right: none;
+    
+    cursor:default;
+}
+#weekView .week .weekDay.valid-day:last-child {
+    border-right: 2px solid #aaa;
+}
+
+#weekView .week .weekDay .dateLabel {
+    font-weight: bold;
+    color: #555;
+}
+
+#weekView .week .weekDay > div {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+}

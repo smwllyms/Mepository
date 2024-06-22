@@ -1,0 +1,55 @@
+#monthView .week {
+    display: flex;
+    height: 100px;
+}
+
+#monthView .week .weekDay {
+
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 100%;
+
+    border: 2px solid #ddd;
+    border-right: none;
+    border-bottom: none;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    cursor:pointer;
+}
+#monthView .week .weekDay:last-child {
+    border-right: 2px solid #ddd;
+}
+#monthView .week:last-child .weekDay {
+    border-bottom: 2px solid #ddd;
+}
+
+#monthView .week .weekDay.valid-day {
+    opacity: 0.5;
+    background-color: #ccc;
+    border: 2px solid #aaa;
+    border-right: none;
+    border-bottom: none;
+    
+    cursor:default;
+}
+#monthView .week .weekDay.valid-day:last-child {
+    border-right: 2px solid #aaa;
+}
+#monthView .week:last-child .weekDay.valid-day {
+    border-bottom: 2px solid #aaa;
+}
+
+#monthView .week .weekDay .dateLabel {
+    font-weight: bold;
+    color: #555;
+}
+
+#monthView .week .weekDay > div {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+}

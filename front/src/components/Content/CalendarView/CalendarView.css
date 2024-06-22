@@ -1,0 +1,23 @@
+#cv-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ddd;
+    height: 100%;
+}
+
+#cv-header ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+#cv-header li {
+    padding: 15px;
+    height: 100%;
+}
+#cv-header li:hover {
+    cursor: pointer;
+    background-color: #c7c7c7;
+}

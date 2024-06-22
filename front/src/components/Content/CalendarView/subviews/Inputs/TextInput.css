@@ -1,0 +1,28 @@
+.text-input {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-input textarea {
+    font-family: Arial, Helvetica, sans-serif;
+
+    resize: vertical;
+    max-height: 400px; 
+    min-height: 100px;
+
+    box-sizing: border-box;
+    padding: 10px;
+
+    flex: 1;
+    padding: 16px;
+}
+.text-input button {
+    font-family: Arial, Helvetica, sans-serif;
+
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100px;
+}
