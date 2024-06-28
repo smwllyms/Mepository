@@ -7,6 +7,7 @@ import * as CalendarAPI from "api/Calendar/calendar.js"
 import DayView from "./subviews/DayView"
 import WeekView from "./subviews/WeekView"
 import MonthView from "./subviews/MonthView"
+import YearView from "./subviews/YearView"
 
 export default function CalendarView(props)
 {
@@ -14,6 +15,7 @@ export default function CalendarView(props)
     // - 0: day
     // - 1: week
     // - 2: month
+    // - 3: year
     const [viewType, setViewType] = React.useState(1);
 
     // Current date (default: now)
@@ -40,6 +42,10 @@ export default function CalendarView(props)
                 // Month
                 setDate(CalendarAPI.nextMonth(direction, date))
                 break;
+            case 3:
+                // Year
+                setDate(CalendarAPI.nextYear(direction, date))
+                break;
             default:
                 // Day
                 setDate(CalendarAPI.nextDay(direction, date))
@@ -61,6 +67,10 @@ export default function CalendarView(props)
                     date={date}
                     loadWeek={e=>safeSetViewType(1,e)}
                     safeSetUserData={props.safeSetUserData}/>;
+            case 3:
+                return <YearView
+                    date={date}
+                    loadMonth={e=>safeSetViewType(2,e)}/>;
             default:
                 return <DayView 
                     date={date}
@@ -70,11 +80,13 @@ export default function CalendarView(props)
 
     return (
         <div id="calendar-view">
+            <h2>Navigation</h2>
             <div id="cv-header">
                 <ul id="time">
                     <li onClick={()=>safeSetViewType(0, new Date())}>Today</li>
                     <li onClick={()=>safeSetViewType(1, new Date())}>This Week</li>
                     <li onClick={()=>safeSetViewType(2, new Date())}>This Month</li>
+                    <li onClick={()=>safeSetViewType(3, new Date())}>This Year</li>
                 </ul>
 
                 <ul id="time">

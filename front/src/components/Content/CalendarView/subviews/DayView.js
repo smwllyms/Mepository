@@ -30,8 +30,15 @@ export default function DayView (props)
 
     // Format date for day entries
     function formatDate(date) {
-        console.log(date)
         return new Date(date).toLocaleTimeString();
+    }
+
+    // Handle submission (change date to sunday)
+    function onSubmit(entry)
+    {
+        entry.tsEntry = entry.date;
+        entry.tsID = currentDay;
+        props.safeSetUserData(0,entry)
     }
 
     return (
@@ -40,9 +47,15 @@ export default function DayView (props)
             <EntryViewer 
                 entryList={items}
                 formatDate={formatDate}/>
-            <h2>Add an entry for this date below</h2>
-            <TextInput
-                onSubmit={e=>props.safeSetUserData(0,e)} />
+            {
+                (new Date().toLocaleDateString() === currentDay.toLocaleDateString() ) ? (
+                    <div>
+                        <h2>Add an entry for this date below</h2>
+                        <TextInput
+                            onSubmit={onSubmit} />
+                        </div>
+                ) : (<></>)
+            }
         </div>
     )
 }

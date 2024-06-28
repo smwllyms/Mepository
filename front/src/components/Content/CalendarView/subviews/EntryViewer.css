@@ -1,9 +1,10 @@
 .entry-viewer {
     width: 100%;
-    background-color: #eee;
 
     padding: 12px;
     box-sizing: border-box;
+    background: linear-gradient(to right, rgb(248, 245, 255), rgb(248, 248, 248)),#eee;
+    box-shadow: 0px 0px 3px rgb(214, 209, 225);
 }
 .entry-viewer .entry {
     padding: 4px;

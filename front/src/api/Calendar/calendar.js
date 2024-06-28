@@ -1,3 +1,20 @@
+function getMonths() {
+    return [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ]
+}
+
 
 function getMonthName(monthNumber)
 {
@@ -40,7 +57,16 @@ function getPastSunday(date)
         date = new Date(date.getTime() - 1 * 24 * 60 * 60 * 1000);
 
     }
-    return date;
+    return new Date(`Sunday, ${getMonthName(date.getUTCMonth())} ${date.getUTCDate()}, ${date.getUTCFullYear()}`);
+}
+
+function getMonthDates(year)
+{
+    return new Array(12).fill().map((v,i)=>getMonthName(i)).map(mo=>new Date(`${mo} 1, ${year}`))
+}
+function getFirstOfMonth(date)
+{
+    return new Date(`${getMonthName(date.getUTCMonth())} 1, ${date.getUTCFullYear()}`)
 }
 
 function getWeek(date)
@@ -129,6 +155,10 @@ function nextDay(direction, date)
 {
     return new Date(date.getTime() + direction * 24 * 60 * 60 * 1000)
 }
+function nextYear(direction, date)
+{
+    return new Date(date.getTime() + direction * 365.25 * 24 * 60 * 60 * 1000)
+}
 
 // Date builder
 function dateStringBuilder(date)
@@ -143,4 +173,4 @@ function dateStringBuilder(date)
     return dateString;
 }
 
-export { getMonthName, getDayName, getWeek, getMonth, nextWeek, nextMonth, nextDay, getPastSunday, dateStringBuilder }
+export { getMonths, getMonthName, getDayName, getWeek, getMonth, getFirstOfMonth, getMonthDates, nextYear, nextWeek, nextMonth, nextDay, getPastSunday, dateStringBuilder }

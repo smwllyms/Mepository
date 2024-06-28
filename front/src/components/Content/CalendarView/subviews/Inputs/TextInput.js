@@ -19,6 +19,8 @@ export default function TextInput(props)
             message: text
         }
 
+        tRef.current.value = "";
+
         props.onSubmit(data);
     }
 

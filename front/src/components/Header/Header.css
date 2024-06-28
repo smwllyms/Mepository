@@ -3,7 +3,8 @@
     height: 80px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
 }
 
@@ -33,12 +34,17 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     box-sizing: border-box;
 }
-#header-nav li:hover {
-    background-color: #e7e7e7;
+#header-nav li.current {
+    background-color: #f7f6ff;
+    border-bottom: 3px solid #e2e1ef;
 }
+#header-nav li:hover {
+    background-color: #e2e1ef!important;
+}
+
 
 #header-search input {
     border-radius: 100px 0 0 100px;
@@ -75,5 +81,5 @@
     box-sizing: border-box;
 }
 #header-settings li:hover {
-    background-color: #e7e7e7;
+    background-color: #e2e1ef;
 }

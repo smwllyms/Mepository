@@ -17,13 +17,15 @@
     flex-direction: column;
     padding: 5px;
 
+    background-color: white;
+
     cursor:pointer;
 }
 #weekView .week .weekDay:last-child {
     border-right: 2px solid #ddd;
 }
 
-#weekView .week .weekDay.valid-day {
+#weekView .week .weekDay.invalid-day {
     opacity: 0.5;
     background-color: #ccc;
     border: 2px solid #aaa;
@@ -31,7 +33,7 @@
     
     cursor:default;
 }
-#weekView .week .weekDay.valid-day:last-child {
+#weekView .week .weekDay.invalid-day:last-child {
     border-right: 2px solid #aaa;
 }
 
@@ -44,4 +46,8 @@
     display: flex;
     justify-content: space-between;
     color: #888;
+}
+
+#weekView .week .weekDay:hover {
+    filter: brightness(0.95)
 }

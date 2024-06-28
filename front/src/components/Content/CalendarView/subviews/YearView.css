@@ -1,24 +1,19 @@
-#cv-header {
+#yearView .month {
     display: flex;
     justify-content: space-between;
     background: linear-gradient(to right, rgb(248, 245, 255), rgb(248, 248, 248)),#ddd;
+    filter: brightness(0.9);
     box-shadow: 0px 0px 3px rgb(214, 209, 225);
-    height: 100%;
+}
+#yearView .month.valid {
+    filter: none;
 }
 
-#cv-header ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    height: 100%;
-    margin:0;
-    padding:0;
-}
-#cv-header li {
+#yearView .month > span {
     padding: 15px;
     height: 100%;
 }
-#cv-header li:hover {
+#yearView .month.valid:hover {
     cursor: pointer;
-    background-color: #e2e1ef;
+    background: #e2e1ef;
 }

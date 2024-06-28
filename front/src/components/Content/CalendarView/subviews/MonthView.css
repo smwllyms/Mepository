@@ -3,6 +3,10 @@
     height: 100px;
 }
 
+#monthView .week:hover {
+    filter: brightness(0.95);
+}
+
 #monthView .week .weekDay {
 
     flex-grow: 1;
@@ -19,15 +23,17 @@
     padding: 5px;
 
     cursor:pointer;
+
+    background-color: white;
 }
 #monthView .week .weekDay:last-child {
     border-right: 2px solid #ddd;
 }
-#monthView .week:last-child .weekDay {
+#monthView .week:nth-last-child(1 of .week) .weekDay {
     border-bottom: 2px solid #ddd;
 }
 
-#monthView .week .weekDay.valid-day {
+#monthView .week .weekDay.invalid-day {
     opacity: 0.5;
     background-color: #ccc;
     border: 2px solid #aaa;
@@ -36,10 +42,10 @@
     
     cursor:default;
 }
-#monthView .week .weekDay.valid-day:last-child {
+#monthView .week .weekDay.invalid-day:last-child {
     border-right: 2px solid #aaa;
 }
-#monthView .week:last-child .weekDay.valid-day {
+#monthView .week:nth-last-child(1 of .week) .weekDay.invalid-day {
     border-bottom: 2px solid #aaa;
 }
 

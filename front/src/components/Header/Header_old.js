@@ -27,10 +27,25 @@ export default function Header(props)
                 </h3>
                 <div id="header-nav">
                     <ul>
-                        <li className={props.currentPageId === 0 ? "current" : ""} onClick={nav}>About</li>
-                        <li className={props.currentPageId === 1 ? "current" : ""}onClick={nav}>CalendarView</li>
+                        <li onClick={nav}>About</li>
+                        <li onClick={nav}>CalendarView</li>
                     </ul>
                 </div>
+            </div>
+
+            <div id="header-search">
+                <input
+                    placeholder="Search..."
+                    ref={searchInputRef}
+                    type="text" />
+                <button
+                    onClick={handleClickSearch}>Search</button>
+            </div>
+            <div id="header-settings">
+                <ul>
+                    <li>Profile</li>
+                    <li>Settings</li>
+                </ul>
             </div>
         </div>
     )

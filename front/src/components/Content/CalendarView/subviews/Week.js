@@ -24,7 +24,7 @@ export default function Week (props)
                 return (
                 <div key={i}
                     onClick={!isValidDay ? null : ()=>props.onClickDay(date)}
-                    className={`weekDay ${!isValidDay ? "valid-day" : ""}`}>
+                    className={`weekDay ${!isValidDay ? "invalid-day" : ""}`}>
                     <div className="dateLabel">
                         <span>{`${day.substring(0,3)}`}</span>
                         <span>{`${dateNumber}`}</span>

@@ -4,13 +4,21 @@
   justify-content: stretch;
   align-items: center;
   min-height: 100vh;
-  width: 100vw;
+  width: calc(100vw);
+  overflow-x: hidden;
+  color: rgb(72, 67, 86);
+  background: linear-gradient(to bottom, white, rgb(248, 245, 255)),white;
+}
+#about p, #about ul, #about li {
+  margin-top: 10px;
+  font-size: calc(8px + 1.2vmin);
 }
 
 #body-wrapper {
   width: 70vw;
   box-shadow: 0px 0px 1px #999;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 40px;
   flex-grow: 1;
+  background: white;
 }

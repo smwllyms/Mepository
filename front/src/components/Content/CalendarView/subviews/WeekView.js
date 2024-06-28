@@ -46,7 +46,8 @@ export default function WeekView (props)
     // Handle submission (change date to sunday)
     function onSubmit(entry)
     {
-        entry.date = currentWeek;
+        entry.tsEntry = entry.date;
+        entry.tsID = currentWeek;
         props.safeSetUserData(1,entry)
     }
 
@@ -71,13 +72,21 @@ export default function WeekView (props)
                 dayItems={dayItems}
                 isValidDay={isValidDay}
                 onClickDay={onClickDay}/>
+            
             <h2>Entries for the week of {weekString}</h2>
             <EntryViewer 
                 entryList={weekItems}
                 formatDate={formatDate}/>
-            <h2>Add an entry for this date below</h2>
-            <TextInput
-                onSubmit={onSubmit} />
+            {
+                (CalendarAPI.getPastSunday(new Date()).toLocaleDateString() === currentWeek.toLocaleDateString() ) ? (
+                    <div>
+                        <h2>Add an entry for this week below</h2>
+                        <TextInput
+                            onSubmit={onSubmit} />
+                        </div>
+                ) : (<></>)
+            }
+            
         </div>
     )
 }
