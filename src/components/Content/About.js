@@ -29,7 +29,7 @@ export default function About(props)
                 <li><b>Week entries</b> are entries to be recorded at <em>any</em> time during the week. For example, you can write about your anticipation for an event upcoming during the week, or make a week-long reflection on Saturday.</li>
                 <li><b>Month entries</b> are entries meant to be understood within the broader context of a month. For example, maybe you are starting a month long detox of sugar! Or, maybe you are analyzing the different stages of growing your beard out!</li>
             </ul>
-            <p>This app was inspired largely by Rob Dyrdek in <a href="https://youtu.be/c_4AkNra_M8?si=dbhcd7nL0xtGWQVS&t=2015">this interview</a>, with an emphasis on having somewhere accessible and easy to naviate to record and later reflect on your experiences through life, on a variety of temporal scales.</p>
+            <p>This app was inspired largely by Rob Dyrdek in <a href="https://youtu.be/c_4AkNra_M8?si=dbhcd7nL0xtGWQVS&t=2015">this interview</a>, with an emphasis on having somewhere accessible and easy to navigate to record and later reflect on your experiences through life, on a variety of temporal scales.</p>
             <p>This app is being developed by <a href="https://smwllyms.github.io">Sam Williams</a>. </p>
         </div>
     );
