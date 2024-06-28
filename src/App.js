@@ -8,7 +8,6 @@ import CalendarView from "./components/Content/CalendarView/CalendarView"
 import Loading from "./components/Loading/Loading"
 
 import DataAPI from "./api/data.js"
-import data from './api/data.js';
 
 // User Data
 export const UserDataContext = React.createContext();
