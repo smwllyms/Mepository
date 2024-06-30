@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mepository/static/css/main.112046d2.css",
-    "main.js": "/mepository/static/js/main.57fd9b8a.js",
+    "main.js": "/mepository/static/js/main.679790d8.js",
     "static/js/453.80efc53e.chunk.js": "/mepository/static/js/453.80efc53e.chunk.js",
     "index.html": "/mepository/index.html",
     "main.112046d2.css.map": "/mepository/static/css/main.112046d2.css.map",
-    "main.57fd9b8a.js.map": "/mepository/static/js/main.57fd9b8a.js.map",
+    "main.679790d8.js.map": "/mepository/static/js/main.679790d8.js.map",
     "453.80efc53e.chunk.js.map": "/mepository/static/js/453.80efc53e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.112046d2.css",
-    "static/js/main.57fd9b8a.js"
+    "static/js/main.679790d8.js"
   ]
 }
